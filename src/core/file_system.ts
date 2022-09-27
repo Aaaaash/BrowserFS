@@ -690,7 +690,7 @@ export class BaseFileSystem {
     // Wrap cb in file closing code.
     const oldCb = cb;
     // Get file.
-    this.open(fname, flag, 0x1a4, function(err: ApiError, fd?: File) {
+    this.open(fname, flag, mode, function(err: ApiError, fd?: File) {
       if (err) {
         return cb(err);
       }
